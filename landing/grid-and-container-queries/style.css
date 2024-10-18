@@ -1,0 +1,87 @@
+:root {
+  --font-size-body: clamp(1.31rem, calc(1rem + 0.37vw), 1.5rem);
+  --font-size-h2: clamp(1.73rem, calc(1rem + 2.35vw), 2.93rem);
+  --font-size-h1: clamp(2.07rem, calc(1rem + 3.1vw), 3.66rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(45deg, #000066 0%, #57006b 11%, #8a0067 22%, #b8005f 33%, #db0054 44%, #f63741 56%, #ff692e 67%, #ff970f 78%, #ffbf00 89%, #ffea00 100%);
+  font-family: var(--font-family, system-ui, sans-serif);
+  font-size: var(--font-size-body);
+  padding-block: 1rem;
+}
+
+h2,
+.font-size-h2 {
+  font-size: var(--font-size-h2);
+}
+
+h1,
+.font-size-h1 {
+  font-size: var(--font-size-h1);
+}
+
+.container {
+  --max-width: 80ch;
+  container-type: inline-size;
+  width: min(var(--max-width), 100% - 3rem);
+  margin-inline: auto;
+}
+
+.card {
+  display: grid;
+  background: white;
+  grid-template-areas: "image content content";
+  margin-inline: auto;
+  margin-block-start: 1rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+.card img {
+  grid-area: image;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.card section {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  padding: 1rem;
+}
+.card section > * {
+  margin-block: 0;
+}
+.card section > * + * {
+  margin-block-start: 1rem;
+}
+.card section p {
+  line-height: 1.5;
+}
+@container (max-width: 60ch) {
+  .card {
+    grid-template-areas: "image content";
+  }
+}
+@container (max-width: 40ch) {
+  .card {
+    grid-template-areas: "image" "content";
+  }
+  .card img {
+    aspect-ratio: 16/9;
+  }
+}
+@container (max-width: 20ch) {
+  .card {
+    grid-template-areas: "image" "content";
+  }
+  .card img {
+    aspect-ratio: 1/1;
+  }
+}

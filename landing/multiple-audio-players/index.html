@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Multiple Audio Players</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- jade: compressed-->
+<ul class="audio-players">
+  <li>
+    <div class="audio-player js-audio-player">
+      <button class="audio-player__control js-control">
+        <div class="audio-player__control-icon"></div>
+      </button>
+      <h4 class="audio-player__title">Audio Clip One</h4>
+      <audio preload="auto">
+        <source src="http://pd.npr.org/anon.npr-mp3/npr/codeswitch/2016/08/20160803_codeswitch_11b.mp3"/>
+      </audio><img class="audio-player__cover" src="https://unsplash.it/g/300?image=29"/>
+      <video preload="auto" loop="loop">
+        <source src="https://dl.dropboxusercontent.com/u/5185018/audio-waves.mp4" type="video/mp4"/>
+      </video>
+    </div>
+  </li>
+  <li>
+    <div class="audio-player js-audio-player">
+      <button class="audio-player__control js-control">
+        <div class="audio-player__control-icon"></div>
+      </button>
+      <h3 class="audio-player__title">Audio Clip Two</h3>
+      <audio preload="auto">
+        <source src="http://pd.npr.org/anon.npr-mp3/npr/ama/2016/06/20160607_ama_bandbonus.mp3"/>
+      </audio><img class="audio-player__cover" src="https://unsplash.it/g/300/?image=48"/>
+      <video preload="auto" loop="loop">
+        <source src="https://dl.dropboxusercontent.com/u/5185018/audio-waves.mp4" type="video/mp4"/>
+      </video>
+    </div>
+  </li>
+  <li>
+    <div class="audio-player js-audio-player">
+      <button class="audio-player__control js-control">
+        <div class="audio-player__control-icon"></div>
+      </button>
+      <h3 class="audio-player__title">Audio Clip Three</h3>
+      <audio preload="auto">
+        <source src="http://pd.npr.org/anon.npr-mp3/npr/pchh/2016/08/20160801_pchh_mtv.mp3"/>
+      </audio><img class="audio-player__cover" src="https://unsplash.it/g/300/?image=43"/>
+      <video preload="auto" loop="loop">
+        <source src="https://dl.dropboxusercontent.com/u/5185018/audio-waves.mp4" type="video/mp4"/>
+      </video>
+    </div>
+  </li>
+</ul>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

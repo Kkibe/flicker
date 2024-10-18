@@ -1,0 +1,111 @@
+:root {
+  --color-primary: #ff1393;
+  --color-border: #ff95e2;
+  --color-secondary: #ffe8ec;
+  --color-text: #333333;
+}
+
+body {
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #eeeeee;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+#scroll-wrapper {
+  position: relative;
+  width: 50vmin;
+  height: 36vmin;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 0 0 1px var(--color-border);
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  padding-top: 24px;
+  padding-bottom: 72px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #dddddd;
+  scroll-snap-align: center;
+  min-width: 45vmin;
+  min-height: 25vmin;
+  font-family: "Inter", sans-serif;
+}
+.card::after {
+  --move-x: -108px;
+  content: "";
+  position: absolute;
+  background-color: var(--color-primary);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translateY(calc(18vmin + 32px)) translateX(var(--move-x))
+    scale(0.6);
+  mix-blend-mode: color-burn;
+}
+#indicatorWrapper {
+  position: fixed;
+  top: 50%;
+  transform: translateY(calc(18vmin + 32px));
+  width: 448px;
+  display: flex;
+  gap: 24px;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+}
+.indicator {
+  position: relative;
+  background-color: var(--color-secondary);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--color-border);
+}
+.card:nth-of-type(3)::after {
+  --move-x: -68px;
+}
+.card:nth-of-type(4)::after {
+  --move-x: -28px;
+}
+.card:nth-of-type(5)::after {
+  --move-x: 12px;
+}
+.card:nth-of-type(6)::after {
+  --move-x: 52px;
+}
+.card:nth-of-type(7)::after {
+  --move-x: 92px;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 7vmin;
+  margin: 0;
+  color: var(--color-primary);
+}
+p {
+  font-size: 2.5vmin;
+  line-height: 160%;
+}

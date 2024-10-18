@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    padding: 2% 5%;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid black;
+}
+a{color: black;}
+.subflow{
+    transition: all 0.8s;
+    background-color: white;
+    filter: opacity(0);
+    color: black;
+    border-radius: 5%;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+.subflow2{
+    transform: translateY(-40px);
+}
+.subflow3{
+    transform: translateY(-60px);
+}
+.subflow4{
+    transform: translateY(-80px);
+}
+.subflow5{
+    transform: translateY(-100px);
+}
+.subflow1{
+    transform: translateY(-20px);
+}
+.mainflow:hover .subflow{
+    filter: opacity(1);
+    transform: translateY(0);
+    color: black;
+    border: 1px solid black;
+}
+.mainflow:hover a{background-color: white; transition: all 2s ease-in; color: black;}
+.mainflow{
+    position: absolute;
+}
+.right a{
+    padding: 0 5px;
+}
+a:hover{
+color: green;
+transition: all 0.5s;
+}
